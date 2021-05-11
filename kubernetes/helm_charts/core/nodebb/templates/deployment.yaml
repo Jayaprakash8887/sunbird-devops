@@ -52,8 +52,10 @@ metadata:
     app: {{ .Chart.Name }}
 spec:
   ports:
-  - name: http-{{ .Chart.Name }}
+  - name: http-nodebb
+    nodePort: 30005
+    port: 9000
     protocol: TCP
-    port: {{ .Values.network.port }}
+    targetPort: 9000
   selector:
     app: {{ .Chart.Name }}
