@@ -54,8 +54,8 @@ spec:
   ports:
   - name: http-nodebb
     nodePort: 30005
-    port: 9000
+    port: 4567
     protocol: TCP
-    targetPort: 9000
+    targetPort: 4567
   selector:
     app: {{ .Chart.Name }}
